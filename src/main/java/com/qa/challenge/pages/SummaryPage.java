@@ -6,20 +6,24 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class CartPage extends TestBase {
+public class SummaryPage extends TestBase {
+
 
     //Initializing the Page Objects
-    public CartPage() {
+    public SummaryPage() {
         PageFactory.initElements(driver, this);
     }
 
     //Defining Page Factory : Object Repository
-    @FindBy(xpath = "//button[@class='wb-e-btn-1 dcp-co-func-header__cta-primary ng-binding']")
-    WebElement continueToAddressAndDeliveryButton;
+
+    @FindBy(xpath = "//h2[@class='dcp-co-order-data-summary__headline ng-binding']")
+    WebElement yourOrderDataHeading;
 
     //Methods : Actions
-    public void clickContinueToAddressAndDelivery() {
-        TestUtil.waitForVisiblityOfElement(driver, continueToAddressAndDeliveryButton);
-        continueToAddressAndDeliveryButton.click();
+
+    public String getOrderDataHeadingText() {
+        TestUtil.waitForVisiblityOfElement(driver, yourOrderDataHeading);
+        return yourOrderDataHeading.getText();
     }
+
 }

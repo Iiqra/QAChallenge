@@ -1,6 +1,7 @@
 package com.qa.challenge.pages;
 
 import com.qa.challenge.base.TestBase;
+import com.qa.challenge.util.TestUtil;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -17,44 +18,55 @@ public class ShippingPage extends TestBase {
     Defining Page Factory : Object Repository
      */
     @FindBy(xpath = "//label[contains(text(),'Mr')]")
-    WebElement mrSalutationRadioButton;
+    public WebElement mrSalutationRadioButton;
 
     @FindBy(xpath = "//label[contains(text(),'Ms')]")
-    WebElement msSalutationRadioButton;
+    public WebElement msSalutationRadioButton;
 
     @FindBy(xpath = "//input[@id='co_payment_address-firstName']")
-    WebElement firstNameTextBox;
+    public WebElement firstNameTextBox;
 
     @FindBy(xpath = "//input[@id='co_payment_address-lastName']")
-    WebElement lastNameTextBox;
+    public WebElement lastNameTextBox;
 
     @FindBy(xpath = "//input[@id='co_payment_address-line2']")
-    WebElement numberTextBox;
+    public WebElement numberTextBox;
 
     @FindBy(xpath = "//input[@id='co_payment_address-line1']")
-    WebElement streetTextBox;
+    public WebElement streetTextBox;
 
     @FindBy(xpath = "//input[@id='co_payment_address-town']")
-    WebElement townTextBox;
+    public WebElement townTextBox;
 
     @FindBy(xpath = "//input[@id='co_payment_address-postalCode']")
-    WebElement postalCodeTextBox;
+    public WebElement postalCodeTextBox;
 
     @FindBy(xpath = "//input[@id='dateOfBirth']")
-    WebElement dateOfBirthTextBox;
+    public WebElement dateOfBirthTextBox;
 
     @FindBy(xpath = "//input[@placeholder='MM']")
-    WebElement monthOfBirthTextBox;
+    public WebElement monthOfBirthTextBox;
 
     @FindBy(xpath = "//input[@placeholder='YYYY']")
-    WebElement yearOfBirthTextBox;
+    public WebElement yearOfBirthTextBox;
 
     @FindBy(xpath = "//input[@id='co_payment_address-phone']")
-    WebElement telephoneNumberTextBox;
+    public WebElement telephoneNumberTextBox;
 
+    @FindBy(xpath = "//button[@class='wb-e-btn-1 dcp-co-func-footer__cta-primary ng-binding ng-scope']")
+    WebElement continueToPaymentTypeButton;
 
     /*
     Methods : Actions
      */
+    public void selectSalutation(WebElement element) {
+        TestUtil.waitForVisiblityOfElement(driver,element);
+        element.click();
+    }
+
+    public void clickContinueToPaymentTypeButton(){
+        TestUtil.waitForVisiblityOfElement(driver,continueToPaymentTypeButton);
+        continueToPaymentTypeButton.click();
+    }
 
 }

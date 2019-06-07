@@ -1,5 +1,6 @@
 package com.qa.challenge.util;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -15,6 +16,16 @@ public class TestUtil {
     public static void waitForVisiblityOfElement(WebDriver driver, WebElement element) {
         explicitWait = new WebDriverWait(driver, PAGE_LOAD_TIMEOUT);
         explicitWait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public static void sendKeysToTextBox(WebDriver driver, WebElement element, String keys){
+        waitForVisiblityOfElement(driver,element);
+        element.sendKeys(keys);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public static boolean isAlertPresent(WebDriver driver) {
