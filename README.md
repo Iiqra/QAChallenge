@@ -2,7 +2,7 @@
 
 This project is an example of UI automated functional test for Mercedes order placement workflow using Selenium WebDriver with TestNG.
 
-# Installation
+## Installation
 
 You need to have Java 8 JDK installed along with maven.
 
@@ -12,7 +12,7 @@ To install all dependencies, run
 $ mvn clean install
 ```
 
-# Running Tests
+## Running Tests
 
 ```sh
 $ mvn test
@@ -20,7 +20,7 @@ $ mvn test
 
 By default, tests will run on Chrome. To change that, change browser name in config.properties located in ./src/main/resources
 
-# Project Structure Overview
+## Project Structure Overview
 
 ##### Test Case
 
