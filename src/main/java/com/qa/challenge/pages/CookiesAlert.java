@@ -8,19 +8,20 @@ import org.openqa.selenium.support.PageFactory;
 
 public class CookiesAlert extends TestBase {
 
-    //Initializing the Page Objects
-
+    //Initializing the Page Elements with Constructor
     public CookiesAlert() {
         PageFactory.initElements(driver, this);
     }
 
-    //Defining Page Factory : Object Repository
-
+    /*
+    Defining Page Factory : Object Repository
+     */
     @FindBy(id = "button-text")
     WebElement closeButton;
 
-    //Methods : Actions
-
+    /*
+    Methods : Actions
+     */
     public void clickClose() {
         TestUtil.waitForVisiblityOfElement(driver, closeButton);
         closeButton.click();

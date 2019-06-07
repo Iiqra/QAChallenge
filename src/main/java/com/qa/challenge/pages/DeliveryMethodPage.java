@@ -9,9 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class DeliveryMethodPage extends TestBase {
 
-    /*
-    Initializing the Page Objects
-    */
+    //Initializing the Page Elements with Constructor
     public DeliveryMethodPage() {
         PageFactory.initElements(driver, this);
     }

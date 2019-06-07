@@ -13,11 +13,13 @@ public class TestUtil {
     public static long PAGE_LOAD_TIMEOUT = 15;
     public static long IMPLICIT_WAIT = 10;
 
+    //wait for visibility of an element
     public static void waitForVisiblityOfElement(WebDriver driver, WebElement element) {
         explicitWait = new WebDriverWait(driver, PAGE_LOAD_TIMEOUT);
         explicitWait.until(ExpectedConditions.visibilityOf(element));
     }
 
+    //send text to a particular text box
     public static void sendKeysToTextBox(WebDriver driver, WebElement element, String keys){
         waitForVisiblityOfElement(driver,element);
         element.sendKeys(keys);
@@ -28,6 +30,7 @@ public class TestUtil {
         }
     }
 
+    //returns boolean value if alert is present on the page
     public static boolean isAlertPresent(WebDriver driver) {
         try {
             driver.switchTo().alert();

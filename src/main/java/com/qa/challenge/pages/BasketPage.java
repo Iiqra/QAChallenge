@@ -8,9 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class BasketPage extends TestBase {
 
-    /*
-    Initializing the Page Objects
-     */
+    //Initializing the Page Elements with Constructor
     public BasketPage() {
         PageFactory.initElements(driver, this);
     }

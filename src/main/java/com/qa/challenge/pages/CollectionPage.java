@@ -8,19 +8,20 @@ import org.openqa.selenium.support.PageFactory;
 
 public class CollectionPage extends TestBase {
 
-    //Initializing the Page Objects
-
+    //Initializing the Page Elements with Constructor
     public CollectionPage() {
         PageFactory.initElements(driver, this);
     }
 
-    //Defining Page Factory : Object Repository
-
+    /*
+    Defining Page Factory : Object Repository
+     */
     @FindBy(xpath = "//div[@class='utils-product-cms-carousel-image-inner']")
     public WebElement firstRecommendationProduct;
 
-    //Methods : Actions
-
+    /*
+    Methods : Actions
+     */
     public void selectRecommendation(WebElement element) {
         TestUtil.waitForVisiblityOfElement(driver, element);
         element.click();

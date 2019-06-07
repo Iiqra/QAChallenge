@@ -8,19 +8,20 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SummaryPage extends TestBase {
 
-
-    //Initializing the Page Objects
+    //Initializing the Page Elements with Constructor
     public SummaryPage() {
         PageFactory.initElements(driver, this);
     }
 
-    //Defining Page Factory : Object Repository
-
+    /*
+    Defining Page Factory : Object Repository
+     */
     @FindBy(xpath = "//h2[@class='dcp-co-order-data-summary__headline ng-binding']")
     WebElement yourOrderDataHeading;
 
-    //Methods : Actions
-
+    /*
+    Methods : Actions
+     */
     public String getOrderDataHeadingText() {
         TestUtil.waitForVisiblityOfElement(driver, yourOrderDataHeading);
         return yourOrderDataHeading.getText();

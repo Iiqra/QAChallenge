@@ -19,10 +19,15 @@ public class PlaceOrderTestCase extends TestBase {
     PaymentPage paymentPage;
     SummaryPage summaryPage;
 
+    //constructor
     PlaceOrderTestCase() {
         super();
     }
 
+    /*
+    This method will initialize the basic setup to run a test case.
+    Also, It will create objects.
+     */
     @BeforeMethod
     public void setUp() {
         initialization();
@@ -36,7 +41,7 @@ public class PlaceOrderTestCase extends TestBase {
         summaryPage = new SummaryPage();
     }
 
-    //place order via Guest but do not order test case
+    //test case - place order via Guest but do not order
     @Test()
     public void placeOrderViaGuestButDoNotOrderTestCase() throws InterruptedException {
         cookiesAlert.clickClose();
@@ -67,6 +72,7 @@ public class PlaceOrderTestCase extends TestBase {
         TestUtil.sendKeysToTextBox(driver,shippingPage.telephoneNumberTextBox,properties.getProperty("telephoneNumber"));
     }
 
+    //closes the WebDriver
     @AfterMethod
     public void tearDown() {
         driver.close();

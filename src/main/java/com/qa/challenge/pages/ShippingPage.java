@@ -8,8 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ShippingPage extends TestBase {
 
-
-    //Initializing the Page Objects
+    //Initializing the Page Elements with Constructor
     public ShippingPage() {
         PageFactory.initElements(driver, this);
     }
@@ -60,12 +59,12 @@ public class ShippingPage extends TestBase {
     Methods : Actions
      */
     public void selectSalutation(WebElement element) {
-        TestUtil.waitForVisiblityOfElement(driver,element);
+        TestUtil.waitForVisiblityOfElement(driver, element);
         element.click();
     }
 
-    public void clickContinueToPaymentTypeButton(){
-        TestUtil.waitForVisiblityOfElement(driver,continueToPaymentTypeButton);
+    public void clickContinueToPaymentTypeButton() {
+        TestUtil.waitForVisiblityOfElement(driver, continueToPaymentTypeButton);
         continueToPaymentTypeButton.click();
     }
 

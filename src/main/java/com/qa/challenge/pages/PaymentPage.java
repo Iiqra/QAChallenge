@@ -8,9 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class PaymentPage extends TestBase {
 
-    /*
-    Initializing the Page Objects
-     */
+    //Initializing the Page Elements with Constructor
     public PaymentPage() {
         PageFactory.initElements(driver, this);
     }
