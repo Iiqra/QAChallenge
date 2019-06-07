@@ -8,24 +8,25 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class DeliveryMethodPage extends TestBase {
+
     /*
     Initializing the Page Objects
     */
-    public DeliveryMethodPage(){
-        PageFactory.initElements(driver,this);
+    public DeliveryMethodPage() {
+        PageFactory.initElements(driver, this);
     }
 
     /*
     Defining Page Factory : Object Repository
      */
-    @FindBy(name="userEmail")
+    @FindBy(name = "userEmail")
     WebElement userEmailTextBox;
 
     /*
     Methods : Actions
      */
-    public void TypeEmailAddressAndPressEnter(String email){
-        TestUtil.waitForVisiblityOfElement(driver,userEmailTextBox);
+    public void TypeEmailAddressAndPressEnter(String email) {
+        TestUtil.waitForVisiblityOfElement(driver, userEmailTextBox);
         userEmailTextBox.sendKeys(email);
         userEmailTextBox.sendKeys(Keys.ENTER);
 

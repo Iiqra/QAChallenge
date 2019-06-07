@@ -10,19 +10,19 @@ public class CollectionPage extends TestBase {
 
     //Initializing the Page Objects
 
-    public CollectionPage(){
-        PageFactory.initElements(driver,this);
+    public CollectionPage() {
+        PageFactory.initElements(driver, this);
     }
 
     //Defining Page Factory : Object Repository
 
-    @FindBy(xpath="//div[@class='utils-product-cms-carousel-image-inner']")
+    @FindBy(xpath = "//div[@class='utils-product-cms-carousel-image-inner']")
     public WebElement firstRecommendationProduct;
 
     //Methods : Actions
 
-    public void selectRecommendation(WebElement element){
-        TestUtil.waitForVisiblityOfElement(driver,element);
+    public void selectRecommendation(WebElement element) {
+        TestUtil.waitForVisiblityOfElement(driver, element);
         element.click();
     }
 }

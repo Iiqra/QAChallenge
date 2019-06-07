@@ -2,14 +2,9 @@ package com.qa.challenge.testcases;
 
 import com.qa.challenge.base.TestBase;
 import com.qa.challenge.pages.*;
-import com.qa.challenge.util.TestUtil;
-import org.openqa.selenium.By;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import java.util.concurrent.TimeUnit;
 
 public class TestCase extends TestBase {
 
@@ -20,7 +15,7 @@ public class TestCase extends TestBase {
     DeliveryMethodPage deliveryMethodPage;
     ShippingPage shippingPage;
 
-    TestCase(){
+    TestCase() {
         super();
     }
 

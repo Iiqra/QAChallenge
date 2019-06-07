@@ -11,14 +11,14 @@ public class BasketPage extends TestBase {
     /*
     Initializing the Page Objects
      */
-    public BasketPage(){
-        PageFactory.initElements(driver,this);
+    public BasketPage() {
+        PageFactory.initElements(driver, this);
     }
 
     /*
     Defining Page Factory : Object Repository
      */
-    @FindBy(xpath="//button[@class='wb-e-btn-1 dcp-pdp-buy-box-add-to-basket__cta ng-binding ng-scope dcp-pdp-buy-box-add-to-basket__cta--one-variant']")
+    @FindBy(xpath = "//button[@class='wb-e-btn-1 dcp-pdp-buy-box-add-to-basket__cta ng-binding ng-scope dcp-pdp-buy-box-add-to-basket__cta--one-variant']")
     WebElement addToBasketButton;
 
     @FindBy(xpath = "//button[@class='wb-e-btn-1 dcp-modal__cta dcp-modal__cta--primary ng-binding']")
@@ -27,13 +27,13 @@ public class BasketPage extends TestBase {
     /*
     Methods : Actions
      */
-    public void clickAddToBasket(){
-        TestUtil.waitForVisiblityOfElement(driver,addToBasketButton);
+    public void clickAddToBasket() {
+        TestUtil.waitForVisiblityOfElement(driver, addToBasketButton);
         addToBasketButton.click();
     }
 
-    public void clickGoToShoppingBasket(){
-        TestUtil.waitForVisiblityOfElement(driver,goToShoppingBasketButton);
+    public void clickGoToShoppingBasket() {
+        TestUtil.waitForVisiblityOfElement(driver, goToShoppingBasketButton);
         goToShoppingBasketButton.click();
     }
 

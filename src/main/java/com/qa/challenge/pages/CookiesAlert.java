@@ -10,19 +10,19 @@ public class CookiesAlert extends TestBase {
 
     //Initializing the Page Objects
 
-    public CookiesAlert(){
-        PageFactory.initElements(driver,this);
+    public CookiesAlert() {
+        PageFactory.initElements(driver, this);
     }
 
     //Defining Page Factory : Object Repository
 
-    @FindBy(id="button-text")
+    @FindBy(id = "button-text")
     WebElement closeButton;
 
     //Methods : Actions
 
-    public void clickClose(){
-        TestUtil.waitForVisiblityOfElement(driver,closeButton);
+    public void clickClose() {
+        TestUtil.waitForVisiblityOfElement(driver, closeButton);
         closeButton.click();
     }
 
