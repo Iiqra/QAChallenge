@@ -24,8 +24,7 @@ public class TestBase {
             properties = new Properties();
 
             //You need to add your config.properties path here
-            FileInputStream fileInputStream = new FileInputStream("F:/Documents/" +
-                    "Benz/Project/QAChallenge/src/main/resources/config.properties");
+            FileInputStream fileInputStream = new FileInputStream("./src/main/resources/config.properties");
             properties.load(fileInputStream);
         } catch (FileNotFoundException f) {
             f.printStackTrace();
